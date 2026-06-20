@@ -12,8 +12,6 @@ export function initialFX() {
     delay: 1,
   });
 
-  gsap.set([".landing-h2-info-1", ".landing-h2-2"], { opacity: 1 });
-
   var landingText = new SplitText(
     [".landing-info h3", ".landing-intro h2", ".landing-intro h1"],
     {
@@ -80,9 +78,12 @@ export function initialFX() {
 
   LoopText(landingText2, landingText3);
   LoopText(landingText4, landingText5);
+
+  gsap.set([".landing-h2-info-1", ".landing-h2-2"], { opacity: 1 });
 }
 
 function LoopText(Text1: SplitText, Text2: SplitText) {
+  gsap.set(Text2.chars, { opacity: 0, y: 80 });
   var tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
   const delay = 4;
   const delay2 = delay * 2 + 1;
