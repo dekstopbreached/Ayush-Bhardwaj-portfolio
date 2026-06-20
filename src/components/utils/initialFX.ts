@@ -12,6 +12,8 @@ export function initialFX() {
     delay: 1,
   });
 
+  gsap.set([".landing-h2-info-1", ".landing-h2-2"], { opacity: 1 });
+
   var landingText = new SplitText(
     [".landing-info h3", ".landing-intro h2", ".landing-intro h1"],
     {
