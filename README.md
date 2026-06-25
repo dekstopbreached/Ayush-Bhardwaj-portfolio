@@ -1,65 +1,109 @@
-# My Portfolio Website - Overview 🚀
+# Ayush Bhardwaj — Portfolio Website
 
-This repository contains the open-source version of my personal portfolio website.  
-Feel free to explore the code and use it for learning and inspiration.
+Personal portfolio showcasing my work as a **Full Stack Developer** and **Data Science** student. Built with React, Three.js, and GSAP for smooth scroll-driven animations and an interactive 3D hero section.
 
----
-
-## ⚠️ Usage Notice
-
-This project is shared for learning purposes only.
-
-Please do NOT:
-- Clone or replicate the full website or design
-- Repost it with minor content changes
-- Use this project for commercial/client work
-- Create tutorials or content using this exact project
-
-If you use parts of the code, you must provide proper credit linking back to the original repository.
-
-Build your own version — don’t just copy.
-
-— Moncy Yohannan
+**Live repo:** [github.com/dekstopbreached/Ayush-Bhardwaj-portfolio](https://github.com/dekstopbreached/Ayush-Bhardwaj-portfolio)
 
 ---
 
-## 🛠️ Instructions
+## About
 
-I have modified the GSAP Club plugins using trial versions.  
-⚠️ Note: Trial plugins cannot be used for production or hosting.
+I'm Ayush Bhardwaj, a B.Tech Computer Science Engineering (Data Science) student at Chandigarh University, Mohali. I build full stack web applications with React, Next.js, Node.js, and Express.js, and I enjoy automation, robotics simulation, and data-driven problem solving.
 
-For official GSAP Club plugins, refer here:  
+**Contact:** [ayushbhardwaj1600@gmail.com](mailto:ayushbhardwaj1600@gmail.com)  
+**GitHub:** [github.com/dekstopbreached](https://github.com/dekstopbreached)  
+**LinkedIn:** [linkedin.com/in/ayush-bhardwaj-355999320](https://www.linkedin.com/in/ayush-bhardwaj-355999320/)
+
+---
+
+## Features
+
+- Interactive **3D character** hero section (React Three Fiber + Three.js)
+- **GSAP** scroll animations, text splitting, and smooth scrolling
+- Animated landing text rotation (Developer / Data Science, Computer Science / Engineering Student)
+- Starfield background and custom cursor
+- Sections: About, What I Do, Career, Work, Tech Stack, Contact
+- Responsive layout for desktop and mobile
+- Loading screen with progress animation
+
+---
+
+## Tech Stack
+
+| Category | Tools |
+|----------|-------|
+| Frontend | React 18, TypeScript, Vite |
+| 3D / WebGL | Three.js, React Three Fiber, Drei |
+| Animation | GSAP, GSAP ScrollTrigger, ScrollSmoother |
+| Styling | CSS |
+| Analytics | Vercel Analytics |
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/dekstopbreached/Ayush-Bhardwaj-portfolio.git
+cd Ayush-Bhardwaj-portfolio
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Build
+
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Character/     # 3D model scene and utilities
+│   ├── styles/        # Component CSS
+│   └── utils/         # GSAP animations (initialFX, splitText, GsapScroll)
+├── context/           # Loading state provider
+├── data/              # Character bone data
+└── shims/             # GSAP trial plugin shims
+```
+
+---
+
+## GSAP Notice
+
+This project uses **GSAP trial plugins** (SplitText, ScrollSmoother) via local shims. Trial plugins are intended for evaluation and may not be suitable for all production use cases.
+
+For official GSAP Club plugins and licensing, see:  
 https://gsap.com/docs/v3/Installation/
 
 ---
 
-## ⚙️ Tech Stack
+## Credits
 
-React • TypeScript • GSAP • Three.js • WebGL • HTML • CSS • JavaScript
+This portfolio is based on the open-source portfolio template by **Moncy Yohannan**. The design and animation architecture were adapted and customized for my personal brand and content.
 
----
-
-## 🎨 Assets Usage
-
-Some 3D assets included in this repository are free to use for learning purposes.
-
-However:
-
-- The original 3D avatar used on my live portfolio is NOT included in this repository
-- That avatar is a custom asset created over ~1 month
-- It is not open source and not available for reuse
-
-Any usage, extraction, or redistribution of that avatar from my live website is strictly prohibited.
+Original template credit: [Moncy Yohannan Portfolio](https://github.com/moncy-yohannan)
 
 ---
 
-![Protfolio-Preview](https://github.com/user-attachments/assets/3c4557e7-6392-4928-b8a9-7b2476ef4edd)
+## License
 
----
-
-## 📄 License
-
-This project is licensed under the Personal Portfolio License (PPL) v1.0.
-
-See the LICENSE file for full details
-
+This project is for personal portfolio use. See the original template repository for license details.
