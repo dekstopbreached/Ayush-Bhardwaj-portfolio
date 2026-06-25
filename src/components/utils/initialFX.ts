@@ -78,62 +78,56 @@ export function initialFX() {
 
   LoopText(landingText2, landingText3);
   LoopText(landingText4, landingText5);
-
-  gsap.set([".landing-h2-info-1", ".landing-h2-2"], { opacity: 1 });
 }
 
 function LoopText(Text1: SplitText, Text2: SplitText) {
-  gsap.set(Text2.chars, { opacity: 0, y: 80 });
-  var tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-  const delay = 4;
-  const delay2 = delay * 2 + 1;
+  const duration = 0.8;
+  const hold = 2;
+  const stagger = 0.03;
 
-  tl.fromTo(
-    Text2.chars,
-    { opacity: 0, y: 80 },
-    {
-      opacity: 1,
-      duration: 1.2,
+  gsap.set(Text1.chars, { opacity: 1, y: 0 });
+  gsap.set(Text2.chars, { opacity: 0, y: 80 });
+
+  gsap
+    .timeline({ repeat: -1, repeatDelay: 0.5 })
+    .to({}, { duration: hold })
+    .to(Text1.chars, {
+      opacity: 0,
+      y: -80,
+      duration,
       ease: "power3.inOut",
-      y: 0,
-      stagger: 0.1,
-      delay: delay,
-    },
-    0
-  )
-    .fromTo(
-      Text1.chars,
-      { y: 80 },
-      {
-        duration: 1.2,
-        ease: "power3.inOut",
-        y: 0,
-        stagger: 0.1,
-        delay: delay2,
-      },
-      1
-    )
-    .fromTo(
-      Text1.chars,
-      { y: 0 },
-      {
-        y: -80,
-        duration: 1.2,
-        ease: "power3.inOut",
-        stagger: 0.1,
-        delay: delay,
-      },
-      0
-    )
+      stagger,
+    })
     .to(
       Text2.chars,
       {
-        y: -80,
-        duration: 1.2,
+        opacity: 1,
+        y: 0,
+        duration,
         ease: "power3.inOut",
-        stagger: 0.1,
-        delay: delay2,
+        stagger,
       },
-      1
-    );
+      "<"
+    )
+    .to({}, { duration: hold })
+    .to(Text2.chars, {
+      opacity: 0,
+      y: -80,
+      duration,
+      ease: "power3.inOut",
+      stagger,
+    })
+    .fromTo(
+      Text1.chars,
+      { opacity: 0, y: 80 },
+      {
+        opacity: 1,
+        y: 0,
+        duration,
+        ease: "power3.inOut",
+        stagger,
+      },
+      "<"
+    )
+    .set(Text2.chars, { y: 80 });
 }
